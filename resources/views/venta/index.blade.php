@@ -13,7 +13,7 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                <form method="GET">
+                                <form method="GET" action="{{ route('Sales.share') }}">
                                     <div class="input-group mb-3">
                                         <input type="text" class="form-control" name="buscarV" placeholder="Buscar">
                                         <button class="btn btn-outline-primary input-group-text" type="submit">
@@ -22,6 +22,14 @@
                                     </div>
                                 </form>
                             </span>
+
+                            <div class="float-right">
+                                <a href="{{ route('ventas.index') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    
+                                  {{ __('Mostrar todo') }}
+                                </a>
+                              </div>
+                            
 
                              <div class="float-right">
                                 <a href="{{ route('ventas.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
@@ -43,12 +51,12 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Producto</th>
+										<th>Venta</th>
 										<th>Cantidad</th>
 										<th>Precio</th>
 										<th>Total Venta</th>
 										<th>Fecha Venta</th>
-										<th>Producto Id</th>
+										<th>Producto</th>
 
                                         <th></th>
                                     </tr>
