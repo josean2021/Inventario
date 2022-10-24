@@ -110,4 +110,14 @@ class CategoriumController extends Controller
         return redirect()->route('categoria.index')
             ->with('success', 'Categorium deleted successfully');
     }
+
+    public function share(Request $request)
+    {
+        $buscar = $searchTerm = '%'.$request->buscarC.'%';
+        $categoria = Categorium::where('categoria', 'like', $buscar)->paginate(10);
+        // dd($query);
+        return view('categorium.index', compact('categoria'))
+            ->with('i', (request()->input('page', 1) - 1) * $categoria->perPage());
+
+    }
 }

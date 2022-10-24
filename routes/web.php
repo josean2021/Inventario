@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\CategoriumController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,5 @@ Route::resource('ventas', App\Http\Controllers\ventaController::class)->middlewa
 // Ruta al inicio
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Ruta de buscador en tiempo real
-//Route::get('categoria/buscador', 'CategoriumController@buscador');
+// Ruta de buscador
+Route::get('category/share', [CategoriumController::class, 'share'])->name('category.share');
