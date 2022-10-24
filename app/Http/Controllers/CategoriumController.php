@@ -18,11 +18,7 @@ class CategoriumController extends Controller
      */
     public function index()
     {
-        $categoria = Categorium::query()
-        ->when(request('buscarC'), function($query){
-            return $query->where('categoria', 'like', '%' . request('buscarC' . '%'));
-        })
-        ->paginate(10);
+        $categoria = Categorium::paginate(10);
 
         return view('categorium.index', compact('categoria'))
             ->with('i', (request()->input('page', 1) - 1) * $categoria->perPage());
@@ -114,7 +110,7 @@ class CategoriumController extends Controller
     public function share(Request $request)
     {
         $buscar = $searchTerm = '%'.$request->buscarC.'%';
-        $categoria = Categorium::where('categoria', 'like', $buscar)->paginate(10);
+        $categoria = Categorium::where('categoria', 'like', $buscar)->paginate(10)->withQueryString();
         // dd($query);
         return view('categorium.index', compact('categoria'))
             ->with('i', (request()->input('page', 1) - 1) * $categoria->perPage());

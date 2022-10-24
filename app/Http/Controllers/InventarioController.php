@@ -106,4 +106,14 @@ class InventarioController extends Controller
         return redirect()->route('inventario.index')
             ->with('success', 'Inventario deleted successfully');
     }
+
+    public function share(Request $request)
+    {
+        $buscar = $searchTerm = '%'.$request->buscarI.'%';
+        $inventarios = Inventario::where('producto', 'like', $buscar)->paginate(10)->withQueryString();
+        // dd($query);
+        return view('inventario.index', compact('inventarios'))
+            ->with('i', (request()->input('page', 1) - 1) * $inventarios->perPage());
+
+    }
 }

@@ -111,4 +111,14 @@ class VentaController extends Controller
         return redirect()->route('ventas.index')
             ->with('success', 'Venta deleted successfully');
     }
+
+    public function share(Request $request)
+    {
+        $buscar = $searchTerm = '%'.$request->buscarV.'%';
+        $ventas = Venta::where('producto', 'like', $buscar)->paginate(10)->withQueryString();
+        // dd($query);
+        return view('venta.index', compact('ventas'))
+            ->with('i', (request()->input('page', 1) - 1) * $ventas->perPage());
+
+    }
 }

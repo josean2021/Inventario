@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\CategoriumController;
+use App\Http\Controllers\InventarioController;
+use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\VentaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,5 +35,16 @@ Route::resource('ventas', App\Http\Controllers\ventaController::class)->middlewa
 // Ruta al inicio
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Ruta de buscador
+//_______________________________
+//_______________________________
+// RUTAS DE BUSCADOR.
+//_______________________________
+//_______________________________
+// Budqueda de Categorias.
 Route::get('category/share', [CategoriumController::class, 'share'])->name('category.share');
+// Busqueda de Inventario
+Route::get('inventary/share', [InventarioController::class, 'share'])->name('inventary.share');
+// Busqueda de Productos
+Route::get('product/share', [ProductoController::class, 'share'])->name('product.share');
+// Busqueda de Ventas
+Route::get('Sales/share', [VentaController::class, 'share'])->name('Sales.share');

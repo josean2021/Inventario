@@ -114,4 +114,14 @@ class ProductoController extends Controller
         return redirect()->route('producto.index')
             ->with('success', 'Producto deleted successfully');
     }
+
+    public function share(Request $request)
+    {
+        $buscar = $searchTerm = '%'.$request->buscarP.'%';
+        $productos = Producto::where('producto', 'like', $buscar)->paginate(10)->withQueryString();
+        // dd($query);
+        return view('producto.index', compact('productos'))
+            ->with('i', (request()->input('page', 1) - 1) * $productos->perPage());
+
+    }
 }
