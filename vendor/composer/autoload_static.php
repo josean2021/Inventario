@@ -123,6 +123,7 @@ class ComposerStaticInit251209f88f271554b0a4fad739259f3a
             'Laravel\\SerializableClosure\\' => 28,
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
+            'LaravelDaily\\LaravelCharts\\' => 27,
         ),
         'I' => 
         array (
@@ -396,6 +397,10 @@ class ComposerStaticInit251209f88f271554b0a4fad739259f3a
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
         ),
+        'LaravelDaily\\LaravelCharts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laraveldaily/laravel-charts/src',
+        ),
         'Illuminate\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Macroable',
@@ -533,6 +538,7 @@ class ComposerStaticInit251209f88f271554b0a4fad739259f3a
         'App\\Http\\Controllers\\CategoriumController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoriumController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\InventarioController' => __DIR__ . '/../..' . '/app/Http/Controllers/InventarioController.php',
         'App\\Http\\Controllers\\ProductoController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductoController.php',
         'App\\Http\\Controllers\\VentaController' => __DIR__ . '/../..' . '/app/Http/Controllers/VentaController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -545,6 +551,7 @@ class ComposerStaticInit251209f88f271554b0a4fad739259f3a
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Models\\Categorium' => __DIR__ . '/../..' . '/app/Models/Categorium.php',
+        'App\\Models\\Inventario' => __DIR__ . '/../..' . '/app/Models/Inventario.php',
         'App\\Models\\Producto' => __DIR__ . '/../..' . '/app/Models/Producto.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\Venta' => __DIR__ . '/../..' . '/app/Models/Venta.php',
@@ -2718,6 +2725,8 @@ class ComposerStaticInit251209f88f271554b0a4fad739259f3a
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'LaravelDaily\\LaravelCharts\\Classes\\LaravelChart' => __DIR__ . '/..' . '/laraveldaily/laravel-charts/src/Classes/LaravelChart.php',
+        'LaravelDaily\\LaravelCharts\\LaravelChartsServiceProvider' => __DIR__ . '/..' . '/laraveldaily/laravel-charts/src/LaravelChartsServiceProvider.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',
         'Laravel\\Sail\\SailServiceProvider' => __DIR__ . '/..' . '/laravel/sail/src/SailServiceProvider.php',
