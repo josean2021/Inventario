@@ -8,13 +8,20 @@ use App\Models\Venta;
 
 class GraficaController extends Controller
 {
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
     public function index(){
-        $ventas =  Venta::all();
-
-        $puntos = [];
+        $ventas = Venta::paginate(2);
+        $total = $ventas->SUM('total_venta');
+        $TodasLasVentas = [];
         foreach ($ventas as $venta) {
-            $puntos[] = ['name' => $venta['producto'], 'y' => floatval($venta['cantidad'])];
+            $TodasLasVentas[] = ['name' => $venta['producto'], 'y' => floatval($venta['cantidad'])];
         }
-        return view("home", ["data" => json_encode($puntos)]);
+        return view('graphics', compact('ventas','total'), ["datos" => json_encode($TodasLasVentas)])
+        ->with('i', (request()->input('page', 1) - 1) * $ventas->perPage());
     }
 }

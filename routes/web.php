@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoriumController;
 use App\Http\Controllers\InventarioController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\VentaController;
+use App\Http\Controllers\GraficaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,11 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+//----------------------------------------------------
+//    Rutas para generar PDF
+//----------------------------------------------------
+// Para categoria
+Route::get('categoria/pdf', [App\Http\Controllers\CategoriumController::class, 'pdf'])->name('categoria.pdf');
 
 // Ruta de módulo categorías
 Route::resource('categoria', App\Http\Controllers\CategoriumController::class)->middleware('auth');
@@ -32,6 +38,8 @@ Route::resource('inventario', App\Http\Controllers\InventarioController::class)-
 Route::resource('producto', App\Http\Controllers\ProductoController::class)->middleware('auth');
 // Ruta de módulo ventas
 Route::resource('ventas', App\Http\Controllers\ventaController::class)->middleware('auth');
+// Ruta de módulo ventas
+Route::resource('graficas', App\Http\Controllers\GraficaController::class)->middleware('auth');
 // Ruta al inicio
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

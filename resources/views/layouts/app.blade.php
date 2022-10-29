@@ -30,7 +30,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-darck shadow-sm" >
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm" >
             <div class="container" >
                 <a class="uk-logo uk-navbar-item" href="/home">
                     <img class="logo" src="{{ asset('img/logo.png') }}">

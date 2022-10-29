@@ -23,14 +23,24 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
     public function index() 
     {
-        $ventas =  Venta::all();
+        date_default_timezone_set("America/El_Salvador");
 
-        $puntos = [];
+        $fecha = date('Y-m-d');
+        $ventas =  Venta::whereDate('fecha_venta',$fecha)->paginate(3);
+        $total = $ventas->SUM('total_venta');
+        $VentasPorDia = [];
         foreach ($ventas as $venta) {
-            $puntos[] = ['name' => $venta['producto'], 'y' => floatval($venta['cantidad'])];
+            $VentasPorDia[] = ['name' => $venta['producto'], 'y' => floatval($venta['cantidad'])];
         }
-        return view("home", ["data" => json_encode($puntos)]);
+        return view("home", compact('ventas','total'),  ["data" => json_encode($VentasPorDia)])
+        ->with('i', (request()->input('page', 1) - 1) * $ventas->perPage());
     }
 }
