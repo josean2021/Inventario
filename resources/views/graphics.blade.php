@@ -1,4 +1,4 @@
-@extends("layouts.app")
+@extends("layouts.app") @extends('layouts.template')
 @section('content')
 <div class="container">
     <div class="card-body alert alert-primary" style="background-color: #fff">

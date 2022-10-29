@@ -34,7 +34,7 @@ class HomeController extends Controller
         date_default_timezone_set("America/El_Salvador");
 
         $fecha = date('Y-m-d');
-        $ventas =  Venta::whereDate('fecha_venta',$fecha)->paginate(3);
+        $ventas =  Venta::whereDate('fecha_venta',$fecha)->paginate(10);
         $total = $ventas->SUM('total_venta');
         $VentasPorDia = [];
         foreach ($ventas as $venta) {

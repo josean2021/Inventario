@@ -15,7 +15,7 @@ class GraficaController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $ventas = Venta::paginate(2);
+        $ventas = Venta::paginate(10);
         $total = $ventas->SUM('total_venta');
         $TodasLasVentas = [];
         foreach ($ventas as $venta) {
