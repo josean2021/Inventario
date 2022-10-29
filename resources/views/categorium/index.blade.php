@@ -46,11 +46,9 @@
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
-                                        <th>No</th>
+                                        <th>N°</th>
                                         
 										<th>Categoria</th>
-
-                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>

@@ -40,7 +40,14 @@
         <!-- Lista de opciones para navegación del sistema -->
         <ul class="nav_list">
             <li>
-                <a href="/admin">
+                <a href="#">
+                    <i class="fas fa-question-circle fa-lg"></i>
+                    <span class="routes_name"> Ayuda </span>
+                </a>
+                <span class="tooltip"> Ayuda </span>
+            </li>
+            <li>
+                <a href="#">
                     <i class="fa fa-user-tie" aria-hidden="true"></i>
                     <span class="routes_name"> Administración </span>
                 </a>

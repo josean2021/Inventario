@@ -5,7 +5,7 @@
         <h4 class=""><i class="fas fa-book"></i> Información de Ventas por día</h4>
         <div class="border-top my-1"></div>
         <div class="row justify-content-center">
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <div id="TodasLasGraficas">
                     
                 </div>

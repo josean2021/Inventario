@@ -58,7 +58,7 @@
                     <!-- Left Side Of Navbar -->
                     @if (Auth::check())
                     <ul class="navbar-nav me-auto">
-                         
+    
                     </ul> 
                     @endif
 

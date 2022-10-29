@@ -1,7 +1,7 @@
 @extends('layouts.app') @extends('layouts.template')
 
 @section('content')
-<div class="container" id="sideMenu">
+<div class="container">
     <div class=" alert alert-primary" style="background-color: #fff">
         <div class="row card-body">
             <div class="col-6">
@@ -16,7 +16,7 @@
         
             <div class="border-top my-1"></div>
             <div class="row justify-content-center">
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <div id="GraficasPorDia">
                     </div>
                 </div>
