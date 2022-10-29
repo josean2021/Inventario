@@ -1,7 +1,7 @@
 @extends('layouts.app') @extends('layouts.template')
 
 @section('content')
-<div class="container">
+<div class="container" id="sideMenu">
     <div class=" alert alert-primary" style="background-color: #fff">
         <div class="row card-body">
             <div class="col-6">

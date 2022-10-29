@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app') 
 @php
 /* ------------------ Plantilla de Login ----------------------*/
 @endphp
@@ -15,7 +15,7 @@
                 <legend class="uk-legend"> Usuario </legend>
                 <div class="uk-inline">
                     <span class="uk-form-icon"><i class="fa fa-user" aria-hidden="true"></i></span>
-                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                    <input class="inputSt" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                          @error('email')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -25,7 +25,7 @@
                 <legend class="uk-legend"> Contraseña </legend>
                 <div class="uk-inline">
                     <span class="uk-form-icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                    <input class="inputSt" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                     @error('password')
                     <span class="invalid-feedback" role="alert">
@@ -36,13 +36,13 @@
                 <div class="row">
                     <div class="uk-inline">
                         <label class="form-check-label" for="remember" style="color: white; text-align: center">
-                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                            <input  class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                             {{ __('Remember Me') }}
                         </label>
                     </div>
                 </div>
                 <div class="uk-margin">
-                    <button type="submit" class="btn btn-primary">
+                    <button class="buttonSt" type="submit" class="btn btn-primary">
                         {{ __('Login') }}
                     </button>
                 </div>

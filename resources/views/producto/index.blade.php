@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.app') @extends('layouts.template')
 
 @section('template_title')
     Producto
 @endsection
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
@@ -23,15 +23,17 @@
                                 </form>
                             </span>
 
-                            <div class="float-right">
-                                <a href="{{ route('producto.index') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Mostrar todo') }}
-                                </a>
-                              </div>
-
                              <div class="float-right">
+                                <a href="{{ route('producto.index') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    {{ __('Mostrar todo') }}
+                                  </a>
+&nbsp;
+                                <a href="" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    {{ __('PDF') }}
+                                </a>
+&nbsp;
                                 <a href="{{ route('producto.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Nuevo producto') }}
                                 </a>
                               </div>
                         </div>

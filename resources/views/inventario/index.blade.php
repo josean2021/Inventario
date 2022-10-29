@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.app') @extends('layouts.template')
 
 @section('template_title')
     Inventario
 @endsection
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="card">
@@ -23,15 +23,17 @@
                                 </form>
                             </span>
 
-                            <div class="float-right">
-                                <a href="{{ route('inventario.index') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Mostrar todo') }}
-                                </a>
-                              </div>
-
                              <div class="float-right">
+                                <a href="{{ route('inventario.index') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    {{ __('Mostrar todo') }}
+                                  </a>
+&nbsp;                               
+                                <a href="" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    {{ __('PDF') }}
+                                </a>
+&nbsp;
                                 <a href="{{ route('inventario.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Nuevo inventario') }}
                                 </a>
                               </div>
                         </div>
@@ -49,7 +51,7 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Producto</th>
+										<th>Inventario</th>
 										<th>Cantidad</th>
 										<th>Precio</th>
 										<th>Unidades</th>

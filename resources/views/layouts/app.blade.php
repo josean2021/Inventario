@@ -17,10 +17,25 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/login_style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">   
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/uikit-rtl.min.css') }}" rel="stylesheet">
+
+    <!-- .................................................................................................. -->
+
+    <!-- .................................................................................................. -->
+    <!-- Estilo CSS -->
+    <link rel="stylesheet" href="{{ asset('css/login_style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/uikit.min.css') }}">
+    <!-- .................................................................................................. -->
+    
+    <!-- .................................................................................................. -->
+    <!-- Script JS -->
+    <script type="text/javascript" src="{{ asset('js/uikit.min.js') }}"></script>
+    <script src="https://kit.fontawesome.com/05f4903dc9.js" crossorigin="anonymous"></script>
+    <!-- .................................................................................................. -->
+
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <script src="https://code.highcharts.com/highcharts.js"></script>

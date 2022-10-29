@@ -81,25 +81,25 @@ legend {
 }
 
 /* Estilo - Ingreso de datos */
-input {
+.inputSt {
     color: var(--text-color) !important;
     border-radius: 6px !important;
     background-color: var(--navLat-color) !important;
     width: 100% !important;
 }
 
-input:hover {
+.inputSt:hover {
     border-radius: 20px !important;
     transition: all 0.7s ease;
 }
 
 /* Estilo - Botón */
-button {
+.buttonSt {
     color: var(--text-color) !important;
     border-radius: 6px !important;
 }
 
-button:hover {
+.buttonSt:hover {
     border-radius: 20px !important;
     transition: all 0.7s ease;
 }

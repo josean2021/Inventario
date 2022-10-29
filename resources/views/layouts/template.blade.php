@@ -14,6 +14,7 @@
         
     </title>
     <link rel="icon" href="{{ asset('img/logo.svg') }}" type="image/svg" />
+    <script src="{{ asset('js/main.js') }}" defer></script>
     <!-- .................................................................................................. -->
 
     <!-- .................................................................................................. -->
@@ -30,7 +31,7 @@
     <div class="sidebar">
         <div class="logo_content">
             <div class="logo">
-                <i class="fa fa-plus-square" aria-hidden="true"></i>
+                <i class="fa fa-plus-square logo_name" aria-hidden="true"></i>
                 <div class="logo_name"> Menú </div>
             </div>
             <i class="fa fa-bars" id="sideMenu" aria-hidden="true"></i>

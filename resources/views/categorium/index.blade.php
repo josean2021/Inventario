@@ -1,11 +1,7 @@
-@extends('layouts.app')
-
-@section('template_title')
-    Categorium
-@endsection
+@extends('layouts.app') @extends('layouts.template')
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container">
         <div class="row"> 
             <div class="col-sm-12">
                 <div class="card">
@@ -22,17 +18,19 @@
                                     </div>
                                 </form>
                             </span>
-                              
-
-                            <div class="float-right">
-                              <a href="{{ route('categoria.index') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                {{ __('Mostrar todo') }}
-                              </a>
-                            </div>
 
                              <div class="float-right">
+                                
+                                <a href="{{ route('categoria.index') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    {{ __('Mostrar todo') }}
+                                </a>
+&nbsp;
+                                <a href="" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                    {{ __('PDF') }}
+                                </a>
+&nbsp;
                                 <a href="{{ route('categoria.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Nueva Categoría') }}
                                 </a>
                               </div>
                         </div>

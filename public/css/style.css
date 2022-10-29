@@ -92,6 +92,7 @@ body {
 .logo_content .logo .logo_name{
     font-size: 20px;
     font-weight: 400;
+    margin-left: 30px;
 }
 
 /* Estilos barra de navegación - Contenido de la barra */
@@ -106,6 +107,7 @@ body {
     text-align: center;
     line-height: 50px;
     transform: translateX(-50%);
+    cursor: pointer;
 }
 
 /* Estilos barra de navegación - Lista sin orden */
@@ -126,14 +128,13 @@ body {
 
 .sidebar ul li .tooltip {
     position: absolute;
-    left: 200px;
+    left: 75px;
     top: 0;
     transform: translateY(-50%);
     border-radius: 6px;
     height: 35px;
-    width: 200px;
+    width: 150px;
     background-color: var(--text-color);
-    line-height: 35px;
     text-align: center;
     box-shadow: 0 5px 10px var(--color-navbar);
     transition: 0s;
