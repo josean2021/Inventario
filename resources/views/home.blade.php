@@ -4,10 +4,18 @@
 <div class="container">
     <div class=" alert alert-primary" style="background-color: #fff">
         <div class="row card-body">
-            <div class="col-6">
+            <div class="col-8">
                 <h4 class=""><i class="fas fa-book"></i> Información de Ventas por día</h4>
             </div>
-            <div class="col-6" style="text-align: right">
+            <div class="col-2">
+                <select class="form-control">
+                    <option selected disabled readonly>Filtrar</option>
+                    @foreach($filtrados as $f)
+                    <option value="{{$f['id']}}">{{$f['fecha_venta']}}</option>
+                   @endforeach
+                  </select>
+            </div>
+            <div class="col-2" style="text-align: right">
                 <a class="nav-link" href="{{ route('graficas.index')}}">
                     <i class="fas fa-chart-pie fa-lg"></i>
                     <span class="routes_name"> Más información </span>
